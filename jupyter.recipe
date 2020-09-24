@@ -1,9 +1,6 @@
 bootstrap: docker
 From: ubuntu:18.04
 
-%labels
-MAINTAINER Sofiane Bendoukha
-
 %post
     # update and install pip
     apt-get -y update
