@@ -1,5 +1,5 @@
 bootstrap: docker
-From: ubuntu:18.04
+From: ubuntu:xenial
 
 %post
     # update and install pip
