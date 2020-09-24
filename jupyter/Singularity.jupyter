@@ -9,6 +9,7 @@ From: ubuntu:xenial
     # update pip and install jupyter
     pip3 install --upgrade pip
     pip3 install jupyter
+    pip3 install jupyterlab
 
     # clean apt
     apt-get autoremove -y
