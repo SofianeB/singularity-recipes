@@ -1,6 +1,9 @@
 bootstrap: docker
 From: ubuntu:xenial
 
+%labels
+MAINTAINER statiksof
+
 %post
     # update and install pip
     apt-get -y update
