@@ -1,6 +1,9 @@
 bootstrap: docker
 From: ubuntu:18.04
 
+%labels
+MAINTAINER statiksof
+
 %post
     # update and install pip
     apt-get -y update
