@@ -10,4 +10,6 @@ module load singularity
 singularity pull shub://statiksof/singularity-recipes:TAG
 ```
 
+Then, you can `shell` or `run` the container.
+
 see [here](https://singularity-hub.org/collections/4819) for all available tags.
