@@ -14,6 +14,7 @@ MAINTAINER statiksof
     export ANACONDA_HOME=/opt/conda
 
 %post
+    export PATH=/opt/conda/bin:$PATH
     # update and install pip
     apt-get -y update
 
@@ -22,7 +23,6 @@ MAINTAINER statiksof
     apt-get clean
 
     # install packages
-    export PATH=/opt/conda/bin:$PATH
     conda config --add channels defaults
     conda config --add channels conda-forge
     conda install --yes jupyter
