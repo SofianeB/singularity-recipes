@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: continuumio/miniconda3:4.4.10
+From: continuumio/miniconda3:4.6.14
 
 %labels
 MAINTAINER statiksof
@@ -8,13 +8,7 @@ MAINTAINER statiksof
     # mount work and scratch
     export SINGULARITY_BINDPATH="/scratch, /work"
 
-    # change conda path
-    export PATH="/opt/conda/bin:/usr/local/bin:/usr/bin:/bin:"
-    unset CONDA_DEFAULT_ENV
-    export ANACONDA_HOME=/opt/conda
-
 %post
-    export PATH=/opt/conda/bin:$PATH
     # update and install pip
     apt-get -y update
 
@@ -31,4 +25,4 @@ MAINTAINER statiksof
 %runscript
     echo "Starting the notebook ..."
     echo "Open browser to localhost:8888"
-    exec /usr/local/bin/jupyter notebook --ip='*' --port=8888 --no-browser
+    exec /opt/conda/bin/jupyter notebook --ip='*' --port=8888 --no-browser
