@@ -22,9 +22,14 @@ MAINTAINER statiksof
     # install packages
     export PATH=/opt/conda/bin:$PATH
     conda config --add channels conda-forge
-    conda install --yes jupyter
-    conda install --yes jupyterlab
-    conda install --yes xarray dask netcdf4 intake-esm 
+    conda install --yes \
+                 jupyter \
+                 jupyterlab \
+                 xarray \
+                 dask==2.29.0 \
+                 netcdf4 \
+                 matplotlib \
+                 intake-esm 
     conda clean --index-cache --tarballs --packages --yes
 
 %runscript
