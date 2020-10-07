@@ -32,8 +32,4 @@ MAINTAINER statiksof
                  intake-esm 
     conda clean --index-cache --tarballs --packages --yes
 
-%runscript
-    echo "Starting the notebook ..."
-    echo "Open browser to localhost:8888"
-    exec /opt/conda/bin/jupyter notebook --ip='*' --port=8888 --no-browser
 
