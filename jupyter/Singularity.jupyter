@@ -18,10 +18,5 @@ MAINTAINER statiksof
     apt-get autoremove -y
     apt-get clean
 
-%environment
-    export SINGULARITY_BINDPATH="/scratch, /work"
 
-%runscript
-    echo "Starting the notebook ..."
-    echo "Open browser to localhost:8888"
-    exec /usr/local/bin/jupyter notebook --ip='*' --port=8888 --no-browser
+
