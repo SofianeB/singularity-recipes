@@ -23,6 +23,7 @@ MAINTAINER statiksof
     export PATH=/opt/conda/bin:$PATH
     conda config --add channels conda-forge
     conda install --yes \
+                 jupyterhub \
                  jupyter \
                  jupyterlab \
                  xarray \
