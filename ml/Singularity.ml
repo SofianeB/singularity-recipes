@@ -2,7 +2,7 @@ Bootstrap: docker
 From: continuumio/miniconda3:4.6.14
 
 %labels
-MAINTAINER statiksof
+MAINTAINER SofianeB
 
 %environment    
     # conda
