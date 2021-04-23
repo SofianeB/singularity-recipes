@@ -30,7 +30,8 @@ MAINTAINER SofianeB
                  dask==2.29.0 \
                  netcdf4 \
                  matplotlib \
-                 intake-esm 
+                 intake-esm \
+                 intake-xarray
     conda clean --index-cache --tarballs --packages --yes
 
 
