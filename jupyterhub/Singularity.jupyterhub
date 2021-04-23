@@ -12,7 +12,7 @@ MAINTAINER SofianeB
 
 
 %post
-    # update and install pip
+    # update 
     apt-get -y update
 
     # clean apt
