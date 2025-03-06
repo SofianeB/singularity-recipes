@@ -1,22 +1,29 @@
-bootstrap: docker
-From: ubuntu:xenial
+Bootstrap: docker
+From: almalinux:8
 
 %labels
-MAINTAINER statiksof
+MAINTAINER gridsof
 
 %post
-    # update and install pip
-    apt-get -y update
-    apt-get -y install python3-pip
+    # update and install requirements
+    dnf -y update
+    dnf -y install python3-pip
+    dnf -y install tcl
 
     # update pip and install jupyter
     pip3 install --upgrade pip
     pip3 install jupyter
     pip3 install jupyterlab
 
-    # clean apt
-    apt-get autoremove -y
-    apt-get clean
+    # clean dnf
+    dnf autoremove -y
+    dnf clean all
+
+%runscript
+    echo "Container starting ..."
+    echo "Activating software modules ..."    
+    bash /sw/spack-workplace/spack-0.22.1/share/spack/setup-env.sh
+
 
 
 
